@@ -1,5 +1,4 @@
 import './App.css';
-import ProtectedRoute from "./routes/ProtectedRoute";
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
