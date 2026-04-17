@@ -1,5 +1,3 @@
-import Login from "./Pages/Login";
-import DashBoard from "./Pages/Dashboard";
 import './App.css';
 import ProtectedRoute from "./routes/ProtectedRoute";
 import React, { Suspense, lazy } from "react";

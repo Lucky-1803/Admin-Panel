@@ -55,14 +55,14 @@ useEffect(() => {
     }
   }
 
-  const handleDelete = async (id) => {
-    try {
-      await API.delete(`/users/deleteUser/${id}`);
-      fetchUsers();
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  const handleDelete = useCallback(async (id) => {
+  try {
+    await API.delete(`/users/deleteUser/${id}`);
+    fetchUsers();
+  } catch (err) {
+    console.log(err);
+  }
+}, [fetchUsers]);
 
   const columns =useMemo(()=> [
     { field: "name", headerName: "Name", width: 150 },
@@ -91,7 +91,7 @@ useEffect(() => {
         </div>
       ),
     },
-  ],[])
+  ],[handleDelete])
 
   return (
     <div className="flex flex-col items-center gap-4">
